@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>mpdris2</Name>
+        <Homepage>https://github.com/eonpatapon/mpDris2</Homepage>
+        <Packager>
+            <Name>Vincent Hourdel</Name>
+            <Email>vincent.hourdel@gmail.com</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <Summary xml:lang="en">MPRIS V2.1 support for mpd</Summary>
+        <Description xml:lang="en">mpDris2 provide MPRIS 2 support to mpd (Music Player Daemon). mpDris2 is run in the user session and monitors a local or distant mpd server.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>mpdris2</Name>
+        <Summary xml:lang="en">MPRIS V2.1 support for mpd</Summary>
+        <Description xml:lang="en">mpDris2 provide MPRIS 2 support to mpd (Music Player Daemon). mpDris2 is run in the user session and monitors a local or distant mpd server.
+</Description>
+        <PartOf>desktop.multimedia</PartOf>
+        <RuntimeDependencies>
+            <Dependency>python-dbus</Dependency>
+            <Dependency>mutagen</Dependency>
+            <Dependency>python-mpd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/systemd</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="config">/etc/xdg/autostart</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-01-04</Date>
+            <Version>0.7</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Vincent Hourdel</Name>
+            <Email>vincent.hourdel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
