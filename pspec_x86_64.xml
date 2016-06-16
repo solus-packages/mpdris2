@@ -3,10 +3,11 @@
         <Name>mpdris2</Name>
         <Homepage>https://github.com/eonpatapon/mpDris2</Homepage>
         <Packager>
-            <Name>Vincent Hourdel</Name>
-            <Email>vincent.hourdel@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>GPL-3.0</License>
+        <PartOf>multimedia.audio</PartOf>
         <Summary xml:lang="en">MPRIS V2.1 support for mpd</Summary>
         <Description xml:lang="en">mpDris2 provide MPRIS 2 support to mpd (Music Player Daemon). mpDris2 is run in the user session and monitors a local or distant mpd server.
 </Description>
@@ -17,29 +18,24 @@
         <Summary xml:lang="en">MPRIS V2.1 support for mpd</Summary>
         <Description xml:lang="en">mpDris2 provide MPRIS 2 support to mpd (Music Player Daemon). mpDris2 is run in the user session and monitors a local or distant mpd server.
 </Description>
-        <PartOf>desktop.multimedia</PartOf>
-        <RuntimeDependencies>
-            <Dependency>python-dbus</Dependency>
-            <Dependency>mutagen</Dependency>
-            <Dependency>python-mpd</Dependency>
-        </RuntimeDependencies>
+        <PartOf>multimedia.audio</PartOf>
         <Files>
+            <Path fileType="config">/etc/xdg/autostart/mpdris2.desktop</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/systemd</Path>
+            <Path fileType="library">/usr/lib/systemd/user/mpDris2.service</Path>
+            <Path fileType="data">/usr/share/applications/mpdris2.desktop</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/org.mpris.MediaPlayer2.mpd.service</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="config">/etc/xdg/autostart</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2016-01-04</Date>
+        <Update release="2">
+            <Date>2016-06-16</Date>
             <Version>0.7</Version>
             <Comment>Packaging update</Comment>
-            <Name>Vincent Hourdel</Name>
-            <Email>vincent.hourdel@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
