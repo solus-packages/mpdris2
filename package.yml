@@ -1,21 +1,21 @@
-name        : mpdris2
-version     : 0.7
-release     : 2
-homepage    : https://github.com/eonpatapon/mpDris2
-source      :
-    - http://mpdris2.patapon.info/mpDris2-0.7/mpdris2-0.7.tar.gz : 6b13de678f6153e0f83cf49258db38b4dc8c4969387d01b0d86c69eca9cac3ed
-license     : GPL-3.0
-component   : multimedia.audio
-summary     : MPRIS V2.1 support for mpd
-description : |
+name       : mpdris2
+version    : '0.7'
+release    : 3
+homepage   : https://github.com/eonpatapon/mpDris2
+source     :
+    - https://github.com/eonpatapon/mpDris2/archive/0.7.tar.gz : 41fc24128e13d4d2b58095c8496357079544fb6a52caca234690a6c265e6ba24
+license    : GPL-3.0
+component  : multimedia.audio
+summary    : MPRIS V2.1 support for mpd
+description: |
     mpDris2 provide MPRIS 2 support to mpd (Music Player Daemon). mpDris2 is run in the user session and monitors a local or distant mpd server.
-setup       : |
+setup      : |
     %autogen
-rundeps     :
+rundeps    :
     - mutagen
     - python-dbus
     - python-mpd
-build       : |
+build      : |
     %make
-install     : |
+install    : |
     %make_install
